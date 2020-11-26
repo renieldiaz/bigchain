@@ -63,3 +63,4 @@ class StoresController extends Controller
         $store->delete();
         return redirect('/stores');
     }
+}

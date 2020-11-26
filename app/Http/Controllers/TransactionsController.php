@@ -68,3 +68,4 @@ class TransactionsController extends Controller
         $transaction->delete();
         return redirect('/transactions');
     }
+}
