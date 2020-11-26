@@ -15,8 +15,10 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('transaction_id');
-            $table->string('product_name');
+            $table->bigInteger('store_id')->unsigned();
+            $table->foreign('store_id')->references('id')->on('stores');
+            $table->string('name');
+            $table->string('image');
             $table->timestamps();
         });
     }
